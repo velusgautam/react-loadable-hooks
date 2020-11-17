@@ -1,6 +1,6 @@
 # React Loadable Hooks implementation
-<a href="https://www.npmjs.com/package/count-down-react"><img src="https://img.shields.io/bundlephobia/min/react-loadable-hooks" alt="Size"/></a>
-<a href="https://www.npmjs.com/package/count-down-react"><img src="https://img.shields.io/npm/v/react-loadable-hooks" alt="Version"/></a>
+<a href="https://www.npmjs.com/package/react-loadable-hooks"><img src="https://img.shields.io/bundlephobia/min/react-loadable-hooks" alt="Size"/></a>
+<a href="https://www.npmjs.com/package/react-loadable-hooks"><img src="https://img.shields.io/npm/v/react-loadable-hooks" alt="Version"/></a>
 [![Views](https://views.hectane.com/velusgautam/react-loadable-hooks.svg)](https://views.hectane.com/)
 
 ## This is forked and modified version from [react-loadable](https://github.com/jamiebuilds/react-loadable) you can use the orginal version for react-loadable if you need it.
