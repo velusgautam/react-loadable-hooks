@@ -3,7 +3,7 @@ export default function ({ types: t, template }) {
     visitor: {
       ImportDeclaration(path) {
         let source = path.node.source.value;
-        if (source !== 'react-loadable') return;
+        if (source !== 'react-loadable-hooks') return;
 
         let defaultSpecifier = path.get('specifiers').find(specifier => {
           return specifier.isImportDefaultSpecifier();
@@ -37,8 +37,10 @@ export default function ({ types: t, template }) {
           let propertiesMap = {};
 
           properties.forEach(property => {
-            let key = property.get('key');
-            propertiesMap[key.node.name] = property;
+            if (property.type !== 'SpreadProperty') {
+                let key = property.get('key');
+                propertiesMap[key.node.name] = property;
+            }
           });
 
           if (propertiesMap.webpack) {

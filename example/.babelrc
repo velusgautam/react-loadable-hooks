@@ -1,16 +1,15 @@
 {
-  "presets": ["es2015", "react"],
+  "presets": ["@babel/preset-env", "@babel/preset-react"],
   "plugins": [
     "dynamic-import-node",
-    "transform-class-properties",
+    "@babel/plugin-proposal-class-properties",
     "../babel",
     [
       "module-resolver",
       {
         "alias": {
           "react-loadable-hooks": "./src/index.js",
-          "react-loadable-hooks/server": "./src/server.js",
-          "react-loadable-hooks/webpack": "./src/webpack.js"
+          "react-loadable-hooks-webpack": "./src/webpack.js"
         }
       }
     ]

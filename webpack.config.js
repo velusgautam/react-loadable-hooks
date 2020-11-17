@@ -21,13 +21,13 @@ module.exports = {
           options: {
             babelrc: false,
             presets: [
-              ['es2015', { modules: false }],
-              'react',
+              ['@babel/preset-env', { modules: false }],
+              '@babel/preset-react',
             ],
             plugins: [
               'syntax-dynamic-import',
-              'transform-class-properties',
-              'transform-object-assign',
+              '@babel/plugin-proposal-class-properties',
+              '@babel/plugin-transform-object-assign',
               require.resolve('./babel'),
             ],
           }
@@ -43,7 +43,7 @@ module.exports = {
   },
   plugins: [
     new ReactLoadablePlugin({
-      filename: path.resolve(__dirname, 'example', 'dist', 'react-loadable.json'),
+      filename: 'react-loadable.json',
     }),
   ]
 };
