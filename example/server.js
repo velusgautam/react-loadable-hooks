@@ -2,8 +2,8 @@ import express from 'express';
 import path from 'path';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
-import Loadable from 'react-loadable';
-import { getBundles } from 'react-loadable/webpack'
+import Loadable from 'react-loadable-hooks';
+import { getBundles } from 'react-loadable-hooks/webpack'
 import App from './components/App';
 
 const stats = require('./dist/react-loadable.json');
@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
   let modules = [];
   let html = ReactDOMServer.renderToString(
     <Loadable.Capture report={moduleName => modules.push(moduleName)}>
-      <App/>
+      <App />
     </Loadable.Capture>
   );
 
@@ -31,15 +31,15 @@ app.get('/', (req, res) => {
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>My App</title>
         ${styles.map(style => {
-          return `<link href="/dist/${style.file}" rel="stylesheet"/>`;
-        }).join('\n')}
+    return `<link href="/dist/${style.file}" rel="stylesheet"/>`;
+  }).join('\n')}
       </head>
       <body>
         <div id="app">${html}</div>
         <script src="/dist/main.js"></script>
         ${scripts.map(script => {
-          return `<script src="/dist/${script.file}"></script>`
-        }).join('\n')}
+    return `<script src="/dist/${script.file}"></script>`
+  }).join('\n')}
         <script>window.main();</script>
       </body>
     </html>

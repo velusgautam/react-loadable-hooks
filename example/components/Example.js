@@ -1,7 +1,6 @@
 import React from 'react';
-import Loadable from 'react-loadable';
+import Loadable from 'react-loadable-hooks';
 import Loading from './Loading';
-
 
 const LoadableNested = Loadable({
   loader: () => import('./ExampleNested'),
