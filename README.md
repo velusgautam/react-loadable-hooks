@@ -1,6 +1,6 @@
 # React Loadable Hooks implementation
 
-## This is forked and modified version from [https://github.com/jamiebuilds/react-loadable](react-loadable) you can use the orginal version for react-loadable if you need it.
+## This is forked and modified version from [react-loadable](https://github.com/jamiebuilds/react-loadable) you can use the orginal version for react-loadable if you need it.
 
 > A higher order component with hooks for loading components with dynamic imports.
 
